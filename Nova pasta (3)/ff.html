@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout de Duas Colunas</title>
+<style>
+  .container {
+    display: flex; /* Usa flexbox para organizar os itens */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+  }
+  .texto {
+    flex: 1; /* Ocupa metade da largura disponível */
+    padding: 0 20px; /* Adiciona um espaçamento interno */
+  }
+  .imagem {
+    flex: 1; /* Ocupa metade da largura disponível */
+    padding: 0 20px; /* Adiciona um espaçamento interno */
+  }
+  .imagem img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do seu contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+  @media only screen and (max-width: 600px) {
+    .container {
+      flex-direction: column; /* Empilha os itens verticalmente em telas menores */
+    }
+    .texto, .imagem {
+      flex: 1; /* Ocupa toda a largura disponível */
+      padding: 20px 0; /* Adiciona espaçamento interno */
+      text-align: center; /* Centraliza o texto e a imagem */
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="texto">
+    <h2>Título do Texto</h2>
+    <p>Descrição do texto aqui. Esta é uma descrição de exemplo que pode ser substituída pelo seu próprio conteúdo.</p>
+  </div>
+  <div class="imagem">
+    <img src="Captura de tela 2024-05-17 050115.png" alt="Descrição da Imagem">
+  </div>
+</div>
+
+</body>
+</html>
